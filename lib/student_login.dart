@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:maitekattendance3/student_login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const StudentLogin());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class StudentLogin extends StatelessWidget {
+  const StudentLogin({super.key});
 
   // This widget is the root of your application.
   @override
@@ -25,28 +24,26 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const StudentLoginPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-    final String title;
+class StudentLoginPage extends StatefulWidget {
+  const StudentLoginPage({super.key, required this.title});
+  final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<StudentLoginPage> createState() => _StudentLoginPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _StudentLoginPageState extends State<StudentLoginPage> {
   int _counter = 0;
 
   void _incrementCounter() {
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => StudentLogin()),
-    );  }
+   // Navigator.push(context, route)
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'Student Login Page',
             ),
             Text(
               '$_counter',
