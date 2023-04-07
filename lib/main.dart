@@ -60,10 +60,18 @@ class LoginBody extends StatelessWidget {
             child: ElvButton.Ogretmen,
           ),
           const SizedBox(
-            height: 110,
+            height: 150,
             width: 100,
           ),
-          Image.asset('assets/logo.png')
+          SizedBox(
+              height: 30, width: 200, child: Image.asset('assets/logo.png')),
+          const SizedBox(
+            width: 170,
+            child: Divider(
+              height: 10,
+              color: Colors.black,
+            ),
+          ),
         ],
       ),
     );
@@ -75,6 +83,8 @@ class ElvButton {
     onPressed: () {/*Buraya fonksiyonu yaz */},
     style:
         ElevatedButton.styleFrom(backgroundColor: ColorsItems.buttonBackground),
+    //BORDER RADIUS EKLE - YUVARLAK KENARLI BUTON
+    //BUTONA OUTLINE EKLE
     child: const Text(
       'Öğrenci Girişi',
       style: TextStyle(color: Colors.black),
