@@ -97,6 +97,8 @@ class TeacherElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
+        //Performans iyileştirmesi için arka planda açılan sayfaları kapatmak gerekiyor
+        //Mert Kök Sayfalar arası geçiş 2 videonun son kısmı kaynak olarak kullanabilirsin.
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => const EnrollTeacher()));
       },
