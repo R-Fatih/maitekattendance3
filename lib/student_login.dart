@@ -13,7 +13,7 @@ class StudentLogin extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // This is the theme of your application.
+        // This is the theme of your application.lib/student_login.dart
         //
         // Try running your application with "flutter run". You'll see the
         // application has a blue toolbar. Then, without quitting the app, try
@@ -41,8 +41,7 @@ class _StudentLoginPageState extends State<StudentLoginPage> {
   int _counter = 0;
 
   void _incrementCounter() {
-
-   // Navigator.push(context, route)
+    // Navigator.push(context, route)
   }
 
   @override
