@@ -37,102 +37,110 @@ class PageViewEnrollStudent extends StatelessWidget {
             ),
           ),
         ),
-        body: SafeArea(
-          child: Center(
-            child: Column(
-              children: [
-                const SizedBox(
-                  height: 75,
-                  width: 100,
-                ),
-                AspectRatio(
-                  aspectRatio: 16 / 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: SizedBox(
-                      height: 200,
-                      width: 200,
-                      child: Image.asset('assets/anıt.png'),
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Center(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 75,
+                    width: 100,
+                  ),
+                  AspectRatio(
+                    aspectRatio: 16 / 5,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 200,
+                        width: 200,
+                        child: Image.asset('assets/anıt.png'),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 20,
-                  width: 100,
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(bottom: 10.0),
-                  child: SizedBox(
+                  const SizedBox(
+                    height: 20,
+                    width: 100,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 10.0),
+                    child: SizedBox(
+                      width: 250,
+                      height: 50,
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'İsim'),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
                     width: 250,
                     height: 50,
                     child: TextField(
                       obscureText: false,
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'İsim'),
+                          border: OutlineInputBorder(), labelText: 'Soyisim'),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 250,
-                  height: 50,
-                  child: TextField(
-                    obscureText: false,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(), labelText: 'Soyisim'),
+                  const Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: SizedBox(
+                      width: 250,
+                      height: 50,
+                      child: TextField(
+                        obscureText: false,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Telefon No'),
+                      ),
+                    ),
                   ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(10.0),
-                  child: SizedBox(
+                  const SizedBox(
                     width: 250,
                     height: 50,
                     child: TextField(
                       obscureText: false,
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          labelText: 'Telefon No'),
+                          labelText: 'Öğrenci No'),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  width: 250,
-                  height: 50,
-                  child: TextField(
-                    obscureText: false,
-                    decoration: InputDecoration(
-                        border: OutlineInputBorder(), labelText: 'Öğrenci No'),
+                  const Padding(
+                    padding: EdgeInsets.all(10),
+                    child: SizedBox(
+                      width: 250,
+                      height: 50,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(), labelText: 'Şifre'),
+                      ),
+                    ),
                   ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(10),
-                  child: SizedBox(
-                    width: 250,
+                  const Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: SizedBox(
+                        width: 250,
+                        height: 50,
+                        child: StudentEnrollmentButton()),
+                  ),
+                  const SizedBox(
                     height: 50,
-                    child: TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'Şifre'),
+                    width: 100,
+                  ),
+                  SizedBox(
+                      height: 30,
+                      width: 200,
+                      child: Image.asset('assets/logo.png')),
+                  const SizedBox(
+                    width: 170,
+                    child: Divider(
+                      height: 10,
+                      color: ColorsItems.dividerBlack,
                     ),
                   ),
-                ),
-                const SizedBox(
-                    width: 250, height: 50, child: StudentEnrollmentButton()),
-                const SizedBox(
-                  height: 50,
-                  width: 100,
-                ),
-                SizedBox(
-                    height: 30,
-                    width: 200,
-                    child: Image.asset('assets/logo.png')),
-                const SizedBox(
-                  width: 170,
-                  child: Divider(
-                    height: 10,
-                    color: ColorsItems.dividerBlack,
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
