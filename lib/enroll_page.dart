@@ -114,7 +114,7 @@ class TeacherElevatedButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
           backgroundColor: ColorsItems.buttonBackgroundYellow),
       child: const Text(
-        'Öğretmen Girişi',
+        'Eğitmen Girişi',
         style: TextStyle(color: Colors.black),
       ),
     );

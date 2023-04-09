@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:maitekattendance3/verification_page.dart';
-
 import 'enroll_page.dart';
+import 'main_page.dart';
 
-class EnrollStudent extends StatelessWidget {
-  const EnrollStudent({super.key});
+class EnrollTeacher extends StatelessWidget {
+  const EnrollTeacher({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       resizeToAvoidBottomInset: false,
-      body: PageViewEnrollStudent(),
+      body: LoginPage(),
     );
   }
 }
 
 //PageView dan extend edemedim.
-class PageViewEnrollStudent extends StatelessWidget {
-  const PageViewEnrollStudent({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +28,7 @@ class PageViewEnrollStudent extends StatelessWidget {
           backgroundColor: ColorsItems.littleDark,
           title: const Center(
             child: Text(
-              'Öğrenci Kayıt Ekranı',
+              'Giriş Ekranı',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25, /*fontStyle:*/
@@ -61,48 +60,13 @@ class PageViewEnrollStudent extends StatelessWidget {
                     height: 20,
                     width: 100,
                   ),
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 10.0),
-                    child: SizedBox(
-                      width: 250,
-                      height: 50,
-                      child: TextField(
-                        obscureText: false,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(), labelText: 'İsim'),
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     width: 250,
                     height: 50,
                     child: TextField(
                       obscureText: false,
                       decoration: InputDecoration(
-                          border: OutlineInputBorder(), labelText: 'Soyisim'),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(10.0),
-                    child: SizedBox(
-                      width: 250,
-                      height: 50,
-                      child: TextField(
-                        obscureText: false,
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            labelText: 'Telefon No'),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 250,
-                    height: 50,
-                    child: TextField(
-                      obscureText: false,
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Öğrenci No'),
+                          border: OutlineInputBorder(), labelText: 'Id'),
                     ),
                   ),
                   const Padding(
@@ -119,8 +83,8 @@ class PageViewEnrollStudent extends StatelessWidget {
                   ),
                   const Padding(
                     padding: EdgeInsets.only(top: 10),
-                    child: SizedBox(
-                        width: 250, height: 50, child: EnrollmentButton()),
+                    child:
+                        SizedBox(width: 250, height: 50, child: LoginButton()),
                   ),
                   const SizedBox(
                     height: 50,
@@ -147,14 +111,14 @@ class PageViewEnrollStudent extends StatelessWidget {
   }
 }
 
-class EnrollmentButton extends StatelessWidget {
-  const EnrollmentButton({super.key});
+class LoginButton extends StatelessWidget {
+  const LoginButton({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () => Navigator.push(context,
-          MaterialPageRoute(builder: (context) => const VerificationPage())),
+      onPressed: () => Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const MainPage())),
 
       style: ElevatedButton.styleFrom(
           backgroundColor: ColorsItems.buttonBackgroundYellow),
